@@ -1,0 +1,37 @@
+{{define "title"}}Contact{{end}}
+
+{{define "main"}}
+    <main class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="banner">
+                        <h1>Contact</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3 mb-2">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputName1" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName1"
+                                   aria-describedby="nameHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="floatingTextarea2">Message</label>
+                            <textarea class="form-control" placeholder="Leave a message here" id="floatingTextarea2"
+                                      style="height: 100px"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+{{end}}

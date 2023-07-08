@@ -1,0 +1,92 @@
+* {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+html, body {
+    height: 100%;
+    font-size: 18px;
+}
+
+body {
+    background-color: #F1F3F6;
+    color: #34495E;
+}
+
+main {
+    margin: 1rem 0 0 0;
+    min-height: calc(100vh - 285px);
+    overflow: auto;
+}
+
+h1 a {
+    font-size: 36px;
+    font-weight: bold;
+    background-image: url("/static/img/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0;
+    height: 36px;
+    padding-left: 50px;
+    position: relative;
+}
+
+a {
+    color: #62CB31;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #29800c;
+    text-decoration: underline;
+}
+
+.navbar-nav .nav-link {
+    color: #62CB31;
+    font-size: 22px;
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    color: #29800c;
+}
+
+header {
+    overflow: auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.banner {
+    margin: 20px 0;
+}
+
+i {
+    transition: all .1s;
+}
+
+ul.tech {
+    list-style: none;
+}
+
+.tech li {
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+ul.skills {
+    list-style: circle;
+}
+
+.fa-brands, .fa-solid {
+    margin-right: 35px;
+}
+
+footer {
+    border-top: 1px solid #E4E5E7;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    background: #F7F9FA;
+    height: 60px;
+    color: #6A6C6F;
+    text-align: center;
+}
