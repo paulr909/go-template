@@ -1,3 +1,5 @@
+[![Go Version](https://img.shields.io/badge/go-1.20-brightgreen.svg)](https://go.dev/)
+
 * Go Template application for creating websites
 * v1
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
