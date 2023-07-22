@@ -12,21 +12,21 @@
             </div>
             <div class="row">
                 <div class="col-md-6 offset-md-3 mb-2">
-                    <form>
+                    <form method="post">
                         <div class="mb-3">
                             <label for="exampleInputName1" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="exampleInputName1"
-                                   aria-describedby="nameHelp">
+                            <input name="name" type="text" class="form-control" id="exampleInputName1"
+                                   aria-describedby="nameHelp" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                   aria-describedby="emailHelp">
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
                             <label for="floatingTextarea2">Message</label>
-                            <textarea class="form-control" placeholder="Leave a message here" id="floatingTextarea2"
-                                      style="height: 100px"></textarea>
+                            <textarea name="message" class="form-control" placeholder="Leave a message here" id="floatingTextarea2"
+                                      style="height: 100px" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-sm">Submit</button>
                     </form>

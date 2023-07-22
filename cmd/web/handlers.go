@@ -14,7 +14,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Include the navigation partial in the template files.
+	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
 		"./ui/html/partials/nav.gohtml",
@@ -41,7 +41,7 @@ func about(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Include the navigation partial in the template files.
+	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
 		"./ui/html/partials/nav.gohtml",
@@ -68,7 +68,7 @@ func tech(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Include the navigation partial in the template files.
+	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
 		"./ui/html/partials/nav.gohtml",
@@ -95,7 +95,13 @@ func contact(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Include the navigation partial in the template files.
+	if r.Method == http.MethodPost {
+		sendEmail(r)
+		http.Redirect(w, r, "/contact", http.StatusFound)
+		return
+	}
+
+	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
 		"./ui/html/partials/nav.gohtml",
@@ -114,6 +120,7 @@ func contact(w http.ResponseWriter, r *http.Request) {
 		log.Print(err.Error())
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 	}
+
 }
 
 func snippetView(w http.ResponseWriter, r *http.Request) {
@@ -123,7 +130,10 @@ func snippetView(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Fprintf(w, "Display a specific snippet with ID %d...", id)
+	_, err = fmt.Fprintf(w, "Display a specific snippet with ID %d...", id)
+	if err != nil {
+		return
+	}
 }
 
 func snippetCreate(w http.ResponseWriter, r *http.Request) {
@@ -133,5 +143,8 @@ func snippetCreate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Write([]byte("Create a new snippet..."))
+	_, err := w.Write([]byte("Create a new snippet..."))
+	if err != nil {
+		return
+	}
 }
