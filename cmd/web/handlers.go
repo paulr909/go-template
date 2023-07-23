@@ -13,7 +13,6 @@ func home(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-
 	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
@@ -40,7 +39,6 @@ func about(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-
 	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
@@ -67,7 +65,6 @@ func tech(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-
 	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
@@ -94,13 +91,12 @@ func contact(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-
+	// Send email
 	if r.Method == http.MethodPost {
 		sendEmail(r)
 		http.Redirect(w, r, "/contact", http.StatusFound)
 		return
 	}
-
 	// Include the navigation partial in the template files
 	files := []string{
 		"./ui/html/base.gohtml",
