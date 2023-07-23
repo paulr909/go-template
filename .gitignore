@@ -30,3 +30,4 @@ go.work
 .idea/
 
 /.env
+/cmd/web/.env
