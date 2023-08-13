@@ -13,6 +13,11 @@ func main() {
 	// directory root.
 	fileServer := http.FileServer(http.Dir("./ui/static/"))
 
+	// Take the ui.Files embedded filesystem and convert it to a http.FS type so
+	// that it satisfies the http.FileSystem interface. We then pass that to the
+	// http.FileServer() function to create the file server handler.
+	//fileServer := http.FileServer(http.FS(ui.Files))
+
 	// Use the mux.Handle() function to register the file server as the handler for
 	// all URL paths that start with "/static/". For matching paths, we strip the
 	// "/static" prefix before the request reaches the file server.
